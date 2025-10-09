@@ -11,22 +11,24 @@
             {% extends "base.html" %}
             {% block contenido %}
             <h1>Bienvenido a la página de animales exóticos</h1>
-            {% for animal in animales %}
-            
-            <div class="card col-4 mb-3" style="max-width: 500px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                                <h5 class="card-title">{{ animal }}</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="row">
+            {% for animal in animal %}
+                        <div class="card col-4 mb-3 margin: 20px" style="max-width: 500px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{{animal.imagen}}" class="img-fluid rounded-start" alt="Imagen de animal exatico">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                            <h5 class="card-title">{{ animal.nombre }}</h5>
+                                            <p class="card-text">{{animal.informacion}}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+
             {% endfor %}
+        </div>
             {% endblock %}
         </div>
     </body>

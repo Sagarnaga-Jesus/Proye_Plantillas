@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Inicio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container" style="text-align: center; margin-top: 100px;">
+            {% extends "base.html" %}
+            {% block contenido %}
+            <h1>Bienvenido a la página de animales exóticos</h1>
+            <div class="row"></div>
+            
+            {% for animal in animales %}
+            
+            <div class="card col-4 mb-3" style="max-width: 500px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="..." class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                                <h5 class="card-title">{{ animal }}</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
