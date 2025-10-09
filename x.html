@@ -6,50 +6,43 @@
     <title>Mi plantilla</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color: aqua;">
+
+  <!-- Menu de navegacion -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> Menu
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link " href="http://127.0.0.1:5000/inicio">Inicio</a>
+                    <a class="nav-link" href="http://127.0.0.1:5000/animales_exoticos">Animales exoticos</a>
+                    <a class="nav-link" href="http://127.0.0.1:5000/vehiculos_antiguos">Vehiculos antiguos</a>
+                    <a class="nav-link" href="http://127.0.0.1:5000/maravillas_mundo">Las maravillas del mundo</a>
+                    <a class="nav-link" href="http://127.0.0.1:5000/acerca_de">Acerca de..</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="container">
 
-      <div class="row">
-        <div class="col">
-          <h1>Mi plantilla</h1>
+        <div class="body">
+          <section>
+            {% block contenido %}
+            {% endblock %}
+          </section>
         </div>
-        
-<header>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Animales exoticos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Autos antiguos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Las 7 maravillas del mundo</a>
-        </li>
-      </ul>
     </div>
-  </div>
-</nav>
-</header>
 
-<section>
-{% block contenido %}
-{% endblock %}
-</section>
-
-<footer>
-  <h6>Derechos reservados &copy; 2024</h6>
-</footer>
-    </div>
+    <div class="footer align-items-end" style="background-color: lightgray; text-align: center; border: 2px solid black;">
+        <p>Proyecto de Plantillas con Flask</p>
+        <p>Desarrollado por: Jesus Antonio Sagarnaga Macias, edad de 17 años</p>
+        <p>Escuela: CETis61 en el curso de programacion, cursando el 5to semestre</p>
+      </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
