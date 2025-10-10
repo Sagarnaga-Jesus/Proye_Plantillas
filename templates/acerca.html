@@ -10,7 +10,13 @@
         <div class="container" style="text-align: center; margin-top: 100px;">
             {% extends "base.html" %}
             {% block contenido %}
-            <h1>Bienvenido a la página de Acerca de</h1>
+            <h1 class="text-light"> Acerca de</h1>
+                <div class="mb-4" style="background-color: rgba(0, 148, 7, 0.71); text-align: center; border: 2px solid black;">
+                    <p class="fs-5">Proyecto de Plantillas</p>
+                    <p class="fs-5">Proyecto en el cual se mezclaron diferentes plantillas con Flask de diversos temas</p>
+                    <p class="fs-5">Desarrollado con: Flask, Bootstrap, Python y Jinja2</p>
+                    <p class="fs-5">Esta pagina tiene como finalidad que nosotros aprendamos mas a usar las distintas herramientas que hemos ido aprendiendo durante el semestre.</p>
+                </div>
             {% endblock %}
         </div>
     </body>

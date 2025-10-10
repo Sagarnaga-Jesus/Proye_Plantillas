@@ -10,18 +10,20 @@
         <div class="container" style="text-align: center; margin-top: 100px;">
             {% extends "base.html" %}
             {% block contenido %}
-            <h1>Bienvenido a la página de animales exóticos</h1>
-            <div class="row">
+            <h1 class="text-light">Bienvenido a la página de animales exóticos</h1>
+            <h3 class="text-light">Explora la diversidad de la fauna exótica entre terrestrez, voladores y acuáticos</h3>
+            <div class="row justify-content-center align-items-center">
             {% for animal in animal %}
-                        <div class="card col-4 mb-3 margin: 20px" style="max-width: 500px;">
-                            <div class="row g-0">
+                        <div class="card col-4 mx-1 mb-4 border border-5 border-dark" style="width: 640px; height: 360px; background-color: rgba(0, 255, 21, 0.7);">
+                            <div class="row">
                                 <div class="col-md-4">
-                                    <img src="{{animal.imagen}}" class="img-fluid rounded-start" alt="Imagen de animal exatico">
+                                    <img src="{{animal.imagen}}" class="img-fluid rounded-start" alt="{{animal.nombre}}" style="max-width: 220px; max-height: 220px; ">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                            <h5 class="card-title">{{ animal.nombre }}</h5>
-                                            <p class="card-text">{{animal.informacion}}</p>
+                                            <h3 class="card-title">{{ animal.nombre }}</h3>
+                                            <h5 class="card-subtitle mb-2 text-muted">{{ animal.tipo }}</h5>
+                                            <p class="card-text fs-6">{{animal.informacion}}</p>
                                         </div>
                                     </div>
                                 </div>

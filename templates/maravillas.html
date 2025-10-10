@@ -10,7 +10,30 @@
         <div class="container" style="text-align: center; margin-top: 100px;">
             {% extends "base.html" %}
             {% block contenido %}
-            <h1>Bienvenido a la página de maravillas del mundo</h1>
+            <h1 class="text-light">Las 7 Maravillas del mundo</h1>
+            <div class="row justify-content-center align-items-center">
+            {% for maravilla in maravillas %}
+                        <div class="card col-4 mx-1 mb-5 border border-5 border-dark" style="width: 640px; height: 340px; background-color: rgba(255, 81, 0, 0.7);">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="{{maravilla.imagen}}" class="img-fluid rounded-start" alt="{{maravilla.nombre}}" style="max-width: 220px; max-height: 220px; ">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                            <h2 class="card-title text-light">{{ maravilla.nombre }}</h2>
+                                            <p class="card-text fs-6 text-light">{{maravilla.informacion}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col">
+                    <video src="static/videos/WhatsApp Video 2025-10-10 at 12.20.27 AM.mp4" controls></video>
+                    <p class="text-light">credito del video para: JR_edits </p>
+                    <a href="https://vt.tiktok.com/ZSUhrxuYh/" class="text-light">Video en tik tok</a>
+                </div>
+            </div>
             {% endblock %}
         </div>
     </body>
