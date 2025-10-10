@@ -14,16 +14,16 @@
             <h3 class="text-light">Explora la diversidad de la fauna exótica entre terrestrez, voladores y acuáticos</h3>
             <div class="row justify-content-center align-items-center">
             {% for animal in animal %}
-                        <div class="card col-4 mx-1 mb-4 border border-5 border-dark" style="width: 640px; height: 360px; background-color: rgba(0, 255, 21, 0.7);">
+                        <div class="card col-4 mx-1 mb-4 border border-5 border-dark" style="width: 640px; height: 360px; background-color: rgba(255, 0, 0, 0.7);">
                             <div class="row">
                                 <div class="col-md-4">
                                     <img src="{{animal.imagen}}" class="img-fluid rounded-start" alt="{{animal.nombre}}" style="max-width: 220px; max-height: 220px; ">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                            <h3 class="card-title">{{ animal.nombre }}</h3>
+                                            <h3 class="card-title text-light">{{ animal.nombre }}</h3>
                                             <h5 class="card-subtitle mb-2 text-muted">{{ animal.tipo }}</h5>
-                                            <p class="card-text fs-6">{{animal.informacion}}</p>
+                                            <p class="card-text fs-6 text-light">{{animal.informacion}}</p>
                                         </div>
                                     </div>
                                 </div>
